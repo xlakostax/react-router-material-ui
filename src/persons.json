@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "firstname": "Kurt",
+    "lastname": "Cobain",
+    "age": 27,
+    "bio": "Kurt Donald Cobain (February 20, 1967 – April 5, 1994) was an American singer, songwriter, and musician, best known as the guitarist and frontman of the rock band Nirvana. He is remembered as one of the most iconic and influential rock musicians in the history of alternative music."
+  },
+  {
+    "id": 2,
+    "firstname": "Jimi",
+    "lastname": "Hendix",
+    "age": 27
+  },
+  {
+    "id": 3,
+    "firstname": "Janis",
+    "lastname": "Joplin",
+    "age": 27
+  },
+  {
+    "id": 4,
+    "firstname": "Jim",
+    "lastname": "Morrison",
+    "age": 27
+  },
+  {
+    "id": 5,
+    "firstname": "Brian",
+    "lastname": "Jones",
+    "age": 27
+  },
+  {
+    "id": 6,
+    "firstname": "Amy",
+    "lastname": "Winehouse",
+    "age": 27
+  }
+]
