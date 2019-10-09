@@ -10,30 +10,35 @@
     "id": 2,
     "firstname": "Jimi",
     "lastname": "Hendix",
-    "age": 27
+    "age": 27,
+    "bio": "James Marshall \"Jimi\" Hendrix (born Johnny Allen Hendrix; November 27, 1942 – September 18, 1970) was an American rock guitarist, singer, and songwriter. His mainstream career lasted only four years, but he is widely regarded as one of the most influential guitarists in history and one of the most celebrated musicians of the 20th century. The Rock and Roll Hall of Fame describes him as \"the greatest instrumentalist in the history of rock music\"."
   },
   {
     "id": 3,
     "firstname": "Janis",
     "lastname": "Joplin",
-    "age": 27
+    "age": 27,
+    "bio": "Janis Lyn Joplin (January 19, 1943 – October 4, 1970) was an American rock, soul, and blues singer-songwriter, and one of the most successful and widely known rock stars of her era. After releasing three albums, she died of a heroin overdose at the age of 27. A fourth album, Pearl, was released in January 1971, just over three months after her death. It reached number one on the Billboard charts."
   },
   {
     "id": 4,
     "firstname": "Jim",
     "lastname": "Morrison",
-    "age": 27
+    "age": 27,
+    "bio": "James Douglas Morrison (December 8, 1943 – July 3, 1971) was an American singer, songwriter and poet, who served as the lead vocalist of the rock band the Doors. Due to his poetic lyrics, distinctive voice, wild personality, unpredictable and erratic performances, and the dramatic circumstances surrounding his life and early death, Morrison is regarded by music critics and fans as one of the most iconic and influential frontmen in rock history. Since his death, his fame has endured as one of popular culture's most rebellious and oft-displayed icons, representing the generation gap and youth counterculture."
   },
   {
     "id": 5,
     "firstname": "Brian",
     "lastname": "Jones",
-    "age": 27
+    "age": 27,
+    "bio": "Lewis Brian Hopkins Jones (28 February 1942 – 3 July 1969) was an English musician, best known as the founder and original leader of the Rolling Stones. Initially a slide guitarist, Jones would go on to play a wide variety of instruments on Rolling Stones recordings and in concerts, such as rhythm and lead guitar, sitar, dulcimer, various keyboard instruments such as piano and mellotron, marimba, wind instruments such as harmonica, recorder, saxophone, as well as drums, vocals and numerous others."
   },
   {
     "id": 6,
     "firstname": "Amy",
     "lastname": "Winehouse",
-    "age": 27
+    "age": 27,
+    "bio": "Amy Jade Winehouse (14 September 1983 – 23 July 2011) was an English singer and songwriter. She was known for her deep, expressive contralto vocals and her eclectic mix of musical genres, including soul (sometimes labelled as blue-eyed soul and neo soul), rhythm and blues, and jazz. Winehouse's debut album, Frank (2003), was a critical success in the UK and was nominated for the Mercury Prize. Her follow-up album, Back to Black (2006), led to five 2008 Grammy Awards, tying the then record for the most wins by a female artist in a single night, and made her the first British woman to win five Grammys, including three of the General Field \"Big Four\" Grammy Awards: Best New Artist, Record of the Year and Song of the Year."
   }
 ]
