@@ -13,7 +13,7 @@ const Members = ({ match }) => { /*<p>{match.params.id}</p>*/
       <div key={member.id}>
         <h3>{member.firstname} {member.lastname}</h3>
         {/*<Link to={`/members/${member.id}`}>Learn more</Link>*/}
-        <Link to={`/members/${member.firstname}`}>Learn more</Link>
+        <Link to={`/members/${member.firstname}_${member.lastname}`}>Learn more</Link>
       </div>
     );
   })

@@ -3,7 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 const Member = ( {match, data} ) => {
   // const membersData = require('./persons.json');
-  var member = data.find(p => p.firstname == match.params.name);
+  var member = data.find(p => p.firstname + '_' + p.lastname == match.params.name);
   console.log(member);
   var memberData;
   if (member)
