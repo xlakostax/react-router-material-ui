@@ -8,7 +8,6 @@ import Notfound from './Notfound';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router, Switch, NavLink } from 'react-router-dom';
 
-const membersData = require('./persons.json');
 const routing = (
   <Router>
     <nav> {/*The link is used to navigate the different routes on the site. But NavLink is used to add the style attributes to the active routes.*/}
@@ -25,8 +24,8 @@ const routing = (
     <main>
       <Switch>
         <Route exact path="/" component={App} /> {/*As index path is '/' and about path is '/about' slash is same in both paths so that it renders both components. To stop this behavior we need to use the 'exact' prop*/}
-        <Route path="/members" component={Members} />
-        <Route path="/members/name" render={props => <Member data={membersData} {...props} />}/>
+        <Route exact path="/members" component={Members} />
+        <Route path="/members/:id" component = {Member}/>}/>
         <Route component={Notfound} />
       </Switch>
     </main>
