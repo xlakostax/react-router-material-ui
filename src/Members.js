@@ -1,31 +1,24 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import Member from './Member'
+import { Link } from 'react-router-dom';
 import './index.css'
 
-const Members = (/*{ match }*/) => { /*<p>{match.params.id}</p>*/
+const Members = () => {
   const membersData = require('./persons.json');
-
-  // console.log(membersData)
-
   var memberList = membersData.map ( (member) => {
     return(
       <div key={member.id}>
+        <img src = {member.photo} alt = {member.firstname} {member.lastname}></img>
         <h3>{member.firstname} {member.lastname}</h3>
-        {/*<Link to={`/members/${member.id}`}>Learn more</Link>*/}
         <Link to={`/members/${member.firstname}_${member.lastname}`}>Learn more</Link>
       </div>
     );
   })
-
   return (
     <div>
       <div>
-        <h3> Members </h3>
+        <h1> Members </h1>
         <ul> {memberList} </ul>
       </div>
-      {/*<Route path={`${match.url}/:memberId`} render={props => <Member data={membersData} {...props} />}/>*/}
-      {/*<<Route path={`${match.url}/:name`} render={props => <Member data={membersData} {...props} />}/>*/}
     </div>
   )
 }

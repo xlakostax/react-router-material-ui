@@ -10,7 +10,7 @@ import { Route, Link, BrowserRouter as Router, Switch, NavLink } from 'react-rou
 
 const routing = (
   <Router>
-    <nav> {/*The link is used to navigate the different routes on the site. But NavLink is used to add the style attributes to the active routes.*/}
+    <nav>
       <ul>
         <li>
           <NavLink exact activeClassName = 'active' to="/">Index</NavLink>
@@ -23,7 +23,7 @@ const routing = (
     <hr />
     <main>
       <Switch>
-        <Route exact path="/" component={App} /> {/*As index path is '/' and about path is '/about' slash is same in both paths so that it renders both components. To stop this behavior we need to use the 'exact' prop*/}
+        <Route exact path="/" component={App} />
         <Route exact path="/members" component={Members} />
         <Route path="/members/:fullname" component = {Member}/>}/>
         <Route component={Notfound} />
@@ -32,7 +32,4 @@ const routing = (
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
