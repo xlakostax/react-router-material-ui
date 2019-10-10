@@ -24,19 +24,6 @@ const Members = ({ match }) => { /*<p>{match.params.id}</p>*/
         <h3> Members </h3>
         <ul> {memberList} </ul>
       </div>
-      {/*<Route path={ `${ match.url }/:memberId` }
-        render={
-          (props) => <Member data= { membersData } { ...props } />
-        }
-      />
-
-      <Route exact path={match.url}
-        render={
-          () => (
-            <div>Please select a member.</div>
-          )
-        }
-      />*/}
       {/*<Route path={`${match.url}/:memberId`} render={props => <Member data={membersData} {...props} />}/>*/}
       <Route path={`${match.url}/:name`} render={props => <Member data={membersData} {...props} />}/>
     </div>
