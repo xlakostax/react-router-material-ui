@@ -25,7 +25,7 @@ const Members = ({ match }) => { /*<p>{match.params.id}</p>*/
         <ul> {memberList} </ul>
       </div>
       {/*<Route path={`${match.url}/:memberId`} render={props => <Member data={membersData} {...props} />}/>*/}
-      <Route path={`${match.url}/:name`} render={props => <Member data={membersData} {...props} />}/>
+      {/*<<Route path={`${match.url}/:name`} render={props => <Member data={membersData} {...props} />}/>*/}
     </div>
   )
 }

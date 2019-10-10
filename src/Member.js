@@ -12,7 +12,13 @@ const Member = ( {match, data} ) => {
         <Link to = '/members'>Back</Link>
       </div>
     );
-  else memberData = <h3> Sorry. Not in the club </h3>;
+  else
+    memberData = (
+      <div>
+        <h3> Sorry. Not in the club</h3>
+        <Link to = '/members'>Back</Link>
+      </div>
+    );
   return (
     <div>
       {memberData}
