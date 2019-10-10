@@ -7,20 +7,21 @@ console.log(membersData);
 class Member extends Component {
   render() {
     var text = '';
-    var memberId = this.props.match.params.id;
-    // console.log(memberId);
+    var fullname = this.props.match.params.fullname;
+    console.log(fullname);
     for (var i=0; i<membersData.length; i++) {
-      if(membersData[i].id == memberId) {
+      if(membersData[i].firstname + '_' + membersData[i].lastname === fullname) {
         text = membersData[i].bio;
       }
-    }
+     }
     return (
       <div>
         {text}
-        <Link to = '/members'>Back</Link>
+        <Link to="/members">Back</Link>
       </div>
     )
   }
+
 }
 
 export default Member;

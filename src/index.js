@@ -25,7 +25,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={App} /> {/*As index path is '/' and about path is '/about' slash is same in both paths so that it renders both components. To stop this behavior we need to use the 'exact' prop*/}
         <Route exact path="/members" component={Members} />
-        <Route path="/members/:id" component = {Member}/>}/>
+        <Route path="/members/:fullname" component = {Member}/>}/>
         <Route component={Notfound} />
       </Switch>
     </main>
