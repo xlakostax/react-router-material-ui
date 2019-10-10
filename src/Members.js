@@ -7,7 +7,7 @@ const Members = () => {
   var memberList = membersData.map ( (member) => {
     return(
       <div key={member.id}>
-        <img src = {member.photo} alt = {member.firstname} {member.lastname}></img>
+        <img src = {member.photo}></img>
         <h3>{member.firstname} {member.lastname}</h3>
         <Link to={`/members/${member.firstname}_${member.lastname}`}>Learn more</Link>
       </div>
