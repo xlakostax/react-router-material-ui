@@ -17,7 +17,7 @@ class Member extends Component {
     return (
       <div>
         {text}
-        
+        <Link to = '/members'>Back</Link>
       </div>
     )
   }
