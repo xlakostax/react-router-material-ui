@@ -4,7 +4,7 @@ class App extends React.Component {
   render() {
     return (
     <article>
-      <h3>Welcome to Club 27</h3>
+      <h3>Welcome to Club 27!</h3>
       <div id='wrapper'>
         <img src='https://bit.ly/2mhpA8M' alt='Club 27 graffiti. Israel'></img>
       </div>
