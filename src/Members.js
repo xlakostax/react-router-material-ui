@@ -4,7 +4,6 @@ import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid
 import './index.css';
 
 const useStyles = makeStyles(theme =>({
-
  grid: {
    justifyContent: "center"
  },
@@ -21,7 +20,7 @@ const Members = () => {
   var memberList = membersData.map ( (member) => {
     return (
       <Grid item key={member.id} >
-        <Card className = {classes.card}>
+        <Card>
           <CardMedia
             component="img"
             image = {member.photo}
