@@ -1,20 +1,32 @@
 import React from 'react';
-import { Route, Link, BrowserRouter as Router, Switch, NavLink } from 'react-router-dom';
-import { makeStyles, Typography } from '@material-ui/core';
-import 'typeface-roboto';
+import { Link } from 'react-router-dom';
+import { Box, makeStyles, Typography } from '@material-ui/core';
 
-
-const useStyles = makeStyles(theme =>({
+const useStyles = makeStyles(theme => ({
   main_text: {
     fontFamily: "'Raleway', sans-serif",
     fontWeight: 400
+  },
+  main_link: {
+    textDecoration: "none",
+    color: "#FF0000",
+    "&:hover": {
+      color: "#ff6347"
+    },
+  },
+  main_img: {
+    width: "60%",
+    height: "auto",
+    maxWidth: "100%",
+    maxHeight: "100%",
+    marginRight: "1em"
   }
 }));
 
 const Common = () => {
     const classes = useStyles();
     return (
-    <div style = {{display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "90%"}}>
+    <Box component = "div" style = {{position: "absolute", top: 0, bottom: 0, margin: "auto 0", display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "100%"}}>
       {/*<svg xmlns="http://www.w3.org/2000/svg" width="8in" height="6.25332in" viewBox="0 0 600 469">
         <path id="Selection" fill="#000" stroke="black" stroke-width="1" d="M 326.00,114.00
           C 329.38,99.60 338.29,95.41 352.01,97.16
@@ -273,15 +285,14 @@ const Common = () => {
           285.00,418.00 284.00,417.00 284.00,417.00
           284.00,417.00 285.00,417.00 285.00,417.00 Z" />
       </svg>*/}
-      <img src="https://bit.ly/33q3LnI" style ={{position: "relative", display: "block", objectFit: "contain", maxWidth: "100%", maxHeight: "100%", marginRight: "1em"}} />
-      <div style = {{position: "relative", flex: 1, marginLeft: "1em"}}>
+      <img src="https://bit.ly/33q3LnI" alt = {"Collage of 27 Club members"} className = {classes.main_img} />
+      <Box component = "div" style = {{position: "relative", flex: 1, marginLeft: "1em"}}>
         <Typography gutterBottom variant = "h5" component = "h2" className = {classes.main_text}>
-          This is "The 27 Club".
-          The members of the club have invented genres, pioneered performances and musical techniques and influenced millions of people.
-          Find out <Link to = "/about">about</Link> the club and club <Link to = "/members">members</Link>, see how to <Link to="/contacts">join us</Link>.
+          They were famous, talented and unhappy. They all died at the same age creating the notorious "The 27 Club" - the so-called association of musicians who influenced world rock, blues and died at 27 years old.
+          Find out <Link to = "/about" className = {classes.main_link}>about</Link> the club and club <Link to = "/members" className = {classes.main_link}>members</Link>, see how to <Link to="/contacts" className = {classes.main_link}>join us</Link>.
         </Typography>
-      </div>
-    </div>
+      </Box>
+    </Box>
     )
 }
 

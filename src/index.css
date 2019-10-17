@@ -26,29 +26,6 @@ body {
   align-items: center;
 }
 
-.active{
-   color:red;
-}
-
-main {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.wrapper {
-  position: relative;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-img {
-display: block;
-  position: relative;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 60%;
-  height: auto;
-  margin: 0 auto 0 auto;
+.active {
+   color: red;
 }

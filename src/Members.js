@@ -1,16 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography, makeStyles } from '@material-ui/core';
+import { Button, Card, createMuiTheme, CardActions, CardContent, CardMedia, Grid, makeStyles, Typography } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles';
 import './index.css';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: "'Raleway', sans-serif",
+    fontWeight: 400
+  }
+});
 
 const useStyles = makeStyles(theme =>({
  grid: {
-   justifyContent: "center"
+   justifyContent: "auto"
+ },
+ members_link: {
+   textDecoration: "none",
+   color: "#FF0000",
+   "&:hover": {
+     color: "#ff6347"
+   }
  },
  memberImage: {
    margin: '1em',
    width: "18em",
-   height: "auto"
+   height: "auto",
  }
 }));
 
@@ -27,29 +42,31 @@ const Members = () => {
             alt = {member.firstname}
             className = {classes.memberImage}
           />
-          <CardContent>
-            <Typography gutterBottom variant = "h5" component = "h2">
+          <Typography gutterBottom variant = "h5" component = "h2">
+            <CardContent>
               {member.firstname} {member.lastname}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small" color="primary">
-              <Link to={`/members/${member.firstname}_${member.lastname}`}>Learn more</Link>
-            </Button>
-          </CardActions>
+            </CardContent>
+            <CardActions>
+              <Button size="small" color="primary">
+                <Link to={`/members/${member.firstname}_${member.lastname}`} className = {classes.members_link}>Learn more</Link>
+              </Button>
+            </CardActions>
+          </Typography>
         </Card>
       </Grid>
     );
   })
   return (
+    <ThemeProvider theme={theme}>
       <div style={{ marginTop: 20, padding: 30 }}>
-        <Typography gutterBottom variant = "h2" component = "h2">
-          Members
+        <Typography gutterBottom variant = "h4" component = "h2">
+          "The 27 Club" members
         </Typography>
         <Grid container className={classes.grid} spacing={2}>
           {memberList}
         </Grid>
       </div>
+    </ThemeProvider>
   )
 }
 
