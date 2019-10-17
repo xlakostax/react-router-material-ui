@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Toolbar, makeStyles } from '@material-ui/core';
+import { Button, List, ListItem, ListItemText, makeStyles, Typography } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import 'typeface-roboto';
 
@@ -17,28 +17,48 @@ const useStyles = makeStyles(theme => ({
 const NavBar = (props) => {
   const classes = useStyles();
   return (
-    <Toolbar component="nav" style = {{position: "relative", width: "100%", height: "100%", display: "flex", flexDirection: "row", justifyContent: "flex-end", padding: 0 }}>
+    <List  component="nav" style = {{position: "relative", width: "100%", height: "100%", display: "flex", flexDirection: "row", justifyContent: "flex-end", padding: 0 }}>
       <NavLink exact activeClassName = 'active' className = {classes.navLink} to="/">
-        <Button color = "secondary" className = {classes.navButton}>
-          Home
-        </Button>
+        <ListItem>
+          <Button color = "secondary">
+            <ListItemText
+              disableTypography
+              primary = {<Typography type="body2" className = {classes.navButton}>Home</Typography>}
+            />
+          </Button>
+        </ListItem>
       </NavLink>
       <NavLink activeClassName = 'active' className = {classes.navLink} to="/members">
-        <Button color = "secondary" className = {classes.navButton}>
-            Members
-        </Button>
+        <ListItem>
+          <Button color = "secondary">
+            <ListItemText
+              disableTypography
+              primary = {<Typography type="body2" className = {classes.navButton}>Members</Typography>}
+            />
+          </Button>
+        </ListItem>
       </NavLink>
       <NavLink activeClassName = 'active' className = {classes.navLink} to="/about">
-        <Button color = "secondary" className = {classes.navButton}>
-            About
-        </Button>
+        <ListItem>
+          <Button color = "secondary">
+            <ListItemText
+              disableTypography
+              primary = {<Typography type="body2" className = {classes.navButton}>About</Typography>}
+            />
+          </Button>
+        </ListItem>
       </NavLink>
       <NavLink activeClassName = 'active' className = {classes.navLink} to="/contacts">
-        <Button color = "secondary" className = {classes.navButton}>
-            Join us
-        </Button>
+        <ListItem>
+          <Button color = "secondary">
+            <ListItemText
+              disableTypography
+              primary = {<Typography type="body2" className = {classes.navButton}>Join us</Typography>}
+            />
+          </Button>
+        </ListItem>
       </NavLink>
-    </Toolbar>
+    </List >
   )
 }
 
